@@ -1,14 +1,18 @@
-#!bin/bash
-private static void readFile(){ 
-String txt null; 
-try { 
-BufferedReader bufferedReader = new BufferedReader(new FileReader("/uploads/TMA.txt")); 
-while((txt = bufferedReader.readLine()) != null) { 
-System.out.println(txt); 
-} bufferedReader.close(); 
-} catch(FileNotFoundException ex) { 
-System.out.println("Unable to read...");
-} catch(IOException ex) { 
-    System.out.println("Unable to read...");
-}
- }
+
+#! /bin/bash
+IFS=$'\n' #separate lines by using escape sequence '\n'
+count=0 #number of lines counter #the file's full path op
+file="/uploads/TMA.txt"
+array=($( cat $1 ))
+for line in "${array[@]}"
+do
+     
+     
+     count=$(($count +1))
+
+done 
+#array=($( cat $file )) #cat file contents to the array
+#cat -n < <(printf "%s\n" "${array[@]}")
+
+echo $count
+
