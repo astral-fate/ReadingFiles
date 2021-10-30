@@ -1,0 +1,24 @@
+#!bin/bash
+bufferedWriter.write("Hi, Writer in action, line one"); 
+bufferedWriter.newLine();
+bufferedWriter.write(" another line.");
+bufferedWriter.close();
+} 
+catch(IOException ex)
+{ 
+System.out.println("Error writing...."); 
+}
+} 
+private static void readFile() { 
+String txt null; 
+try { 
+BufferedReader bufferedReader = new BufferedReader(new FileReader("/uploads/testinput.txt")); 
+while((txt = bufferedReader.readLine()) != null) { 
+System.out.println(txt); 
+} bufferedReader.close(); 
+} catch(FileNotFoundException ex) { 
+System.out.println("Unable to read...");
+} catch(IOException ex)
+{ System.out.println("Unable to read...");
+}
+ }
